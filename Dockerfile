@@ -1,6 +1,6 @@
 # h5ai Dockerfile
 
-FROM vsense/nginx:php
+FROM vsense/nginx:php-fpm
 
 MAINTAINER vSense <docker@vsense.fr>
 
