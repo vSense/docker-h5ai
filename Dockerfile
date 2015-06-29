@@ -4,6 +4,8 @@ FROM vsense/nginx:php-fpm
 
 MAINTAINER vSense <docker@vsense.fr>
 
+COPY h5ai.zip /tmp/h5ai.zip
+
 RUN apk add --update  \
     ffmpeg \
     php-gd \
@@ -12,6 +14,7 @@ RUN apk add --update  \
     imagemagick \
     zip \
     && rm -rf /var/cache/apk/*
+    && unzip /tmp/h5ai/zip -d /var/www
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
