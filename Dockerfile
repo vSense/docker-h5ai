@@ -13,8 +13,8 @@ RUN apk add --update  \
     php-json \
     imagemagick \
     zip \
-    && rm -rf /var/cache/apk/*
-    && unzip /tmp/h5ai/zip -d /var/www
+    && rm -rf /var/cache/apk/* \
+    && unzip /tmp/h5ai.zip -d /var/www
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
