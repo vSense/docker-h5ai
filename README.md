@@ -33,7 +33,7 @@ Requires=docker.service
 [Service]
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker pull vsense/h5ai
-ExecStart=/usr/bin/docker run --rm --name h5ai --hostname h5ai --dns=172.17.42.1 -v /srv/seedbox:/var/www vsense/h5ai
+ExecStart=/usr/bin/docker run --rm --name h5ai --hostname h5ai -v /srv/seedbox:/var/www vsense/h5ai
 ExecStop=/usr/bin/docker stop h5ai
 ExecReload=/usr/bin/docker restart h5ai
 
