@@ -1,10 +1,8 @@
-# h5ai Dockerfile
-
 FROM vsense/nginx:php-fpm
 
 MAINTAINER vSense <docker@vsense.fr>
 
-COPY h5ai.zip /tmp/h5ai.zip
+ENV PKGVER 0.27.0
 
 RUN apk add --update  \
     ffmpeg \
@@ -13,8 +11,11 @@ RUN apk add --update  \
     php-json \
     imagemagick \
     zip \
-    && rm -rf /var/cache/apk/* \
-    && unzip /tmp/h5ai.zip -d /var/www
+    wget \
+    && wget --no-check-certificate https://release.larsjung.de/h5ai/h5ai-"$PKGVER".zip -P /tmp \
+    && unzip /tmp/h5ai-"$PKGVER".zip -d /var/www \
+    && apk del wget \
+    && rm -rf /var/cache/apk/* /tmp/*
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
