@@ -6,9 +6,9 @@ ENV PKGVER 0.28.1
 
 RUN apk add --update  \
     ffmpeg \
-    php7-gd \
-    php7-exif \
-    php7-json \
+    php7-gd@testing \
+    php7-exif@testing \
+    php7-json@testing \
     imagemagick \
     zip \
     wget \
