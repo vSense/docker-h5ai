@@ -1,4 +1,4 @@
-FROM vsense/nginx:php7-fpm
+FROM vsense/nginx:php-fpm
 
 MAINTAINER vSense <docker@vsense.fr>
 
@@ -6,9 +6,9 @@ ENV PKGVER 0.28.1
 
 RUN apk add --update  \
     ffmpeg \
-    php7-gd@testing \
-    php7-exif@testing \
-    php7-json@testing \
+    php-gd \
+    php-exif \
+    php-json \
     imagemagick \
     zip \
     wget \
