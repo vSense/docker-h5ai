@@ -2,7 +2,7 @@ FROM vsense/nginx:php7-fpm
 
 MAINTAINER vSense <docker@vsense.fr>
 
-ENV PKGVER 0.28.1
+ENV PKGVER 0.29.0
 
 RUN apk add --update  \
     ffmpeg \
