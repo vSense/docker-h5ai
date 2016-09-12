@@ -1,4 +1,4 @@
-FROM vsense/nginx:php7-fpm
+FROM vsense/nginx:php7
 
 MAINTAINER vSense <docker@vsense.fr>
 
