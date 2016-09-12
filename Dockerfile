@@ -6,12 +6,12 @@ ENV PKGVER 0.29.0
 
 RUN apk add --update  \
     ffmpeg \
-    libwebp@edge \
-    php7-gd@edge \
-    php7-exif@edge \
-    php7-json@edge \
-    php7-session@edge \
-    imagemagick@edge \
+    libwebp \
+    php7-gd@community \
+    php7-exif@community \
+    php7-json@community \
+    php7-session@community \
+    imagemagick \
     zip \
     wget \
     && wget --no-check-certificate https://release.larsjung.de/h5ai/h5ai-"$PKGVER".zip -P /tmp \
