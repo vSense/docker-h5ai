@@ -7,10 +7,10 @@ ENV PKGVER 0.29.0
 RUN apk add --update  \
     ffmpeg \
     libwebp \
-    php7-gd@community \
-    php7-exif@community \
-    php7-json@community \
-    php7-session@community \
+    php7-gd \
+    php7-exif \
+    php7-json \
+    php7-session \
     imagemagick \
     zip \
     wget \
